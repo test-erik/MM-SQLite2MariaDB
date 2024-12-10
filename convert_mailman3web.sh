@@ -85,5 +85,5 @@ sed -i -e "/^CREATE/d; /INSERT INTO sqlite_sequence/d" "$DUMP_FILE"
 
 echo "Anpassungen abgeschlossen. Eine Sicherung wurde unter ${DUMP_FILE}.bak gespeichert."
 
-mariadb -h localhost -u root -p42hackware $MARIADB_WEBDB <  $DUMP_FILE
+mariadb -h localhost -u root --p<SECRET> $MARIADB_WEBDB <  $DUMP_FILE
 
