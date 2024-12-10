@@ -19,7 +19,6 @@ echo "SET NAMES utf8mb4;" >> $DUMP_FILE
 #USE $MARIADB_WEBDB;
 #EOF
 
-# for i in {1..14} ; do mariadb -h localhost -u root -p42hackware mailman3 < mailmandb-to-mariadb$i.sql ; done
 mariadb -h localhost -u root -p<SECRET> $MARIADB_WEBDB < mailmandb_web-to-mariadb.sql
 # ↑
 ## später löschen!
