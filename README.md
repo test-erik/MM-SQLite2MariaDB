@@ -5,6 +5,8 @@ In the standard installation under Debian, Mailman3 uses an SQLite database. At 
 
 https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/docs/database.html#database-migrations
 
+The reason for this repository is that it was not obvious to create the schema for the databases and the order of the SQLite dumps in such a way that Mailman is satisfied afterwards.
+
 ## How to proceed
 
 Two databases need to be converted, the one from the archive (Hyperkitty) and the actual Mailman3 database. First, I came up with a great script that takes into account the dependencies with foreign keys when creating tables using topological sorting. (Finally I could put my knowledge of graph theory to practical use!) But Mailman uses circular dependencies. In practice, this means that statements are broken down in such a way that the foreign keys are only inserted after all tables have been created.
