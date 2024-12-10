@@ -71,7 +71,7 @@ sed -i -e 's/"//g; s/AUTOINCREMENT/AUTO_INCREMENT/g' "$DUMP_FILE"
 
 echo "Anpassungen abgeschlossen. Eine Sicherung wurde unter ${DUMP_FILE}.bak gespeichert."
 
-mariadb -h localhost -u root -p42hackware $MARIADB_DB < "$DUMP_FILE"
+mariadb -h localhost -u root -p<SECRET> $MARIADB_DB < "$DUMP_FILE"
 
 
 exit
