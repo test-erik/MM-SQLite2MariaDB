@@ -17,14 +17,14 @@ Two databases need to be converted, the one from the archive (Hyperkitty) and th
 * substitue strings that are allowed in SQLite but not MariaDB
 * insert the dump file
 
-All these steps are done by calling `convert_mailman3web.sh`.
+All these steps are done by calling [convert_mailman3web.sh](convert_mailman3web.sh).
 
 ### Converting the archive
 * apply `mailman.sql`
 * dump the archive from `/var/lib/mailman3/data/mailman.db` (in the right order, pay attention to dependencies)
 * insert the dump file
 
-All these steps are done by calling `convert_mailman.sh`.
+All these steps are done by calling [convert_mailman.sh](convert_mailman.sh).
 
 ## A warning
 
