@@ -188,7 +188,7 @@ CREATE TABLE template (
 CREATE TABLE workflowstate (
     token VARCHAR(255) NOT NULL,
     step VARCHAR(255),
-    data VARCHAR(255),
+    data VARCHAR(510),
     PRIMARY KEY (token)
 );
 
