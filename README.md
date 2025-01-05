@@ -1,9 +1,8 @@
 # MM-SQLite2MariaDB
 ## Convert a Mailman3 Database from SQLite to MariaDB
 
-In the standard installation under Debian, Mailman3 uses an SQLite database. At some point, however, you will want to switch to a real database. The mechanism described in the Mailman documentation does not refer to Mailman3 as it is delivered by the distributions.
-
-https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/docs/database.html#database-migrations
+In the standard installation under Debian, Mailman3 uses a SQLite database. At some point, however, you will want to switch to a real database. The mechanism described in the Mailman documentation does not refer to Mailman3 as it is delivered by the distributions, see
+https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/docs/database.html#database-migrations .
 
 The reason for this repository is that it was not obvious to create the schema for the databases and the order of the SQLite dumps in such a way that Mailman is satisfied afterwards.
 
@@ -19,7 +18,7 @@ Two databases need to be converted, the one from the archive (Hyperkitty) and th
 
 All these steps are done by calling [convert_mailman3web.sh](convert_mailman3web.sh).
 
-### Converting the archive
+### Converting the mailman data
 * apply `mailman.sql`
 * dump the archive from `/var/lib/mailman3/data/mailman.db` (in the right order, pay attention to dependencies)
 * insert the dump file
