@@ -239,7 +239,7 @@ CREATE INDEX ix_headermatch_position ON headermatch (position);
 CREATE TABLE pendedkeyvalue (
     id INT NOT NULL AUTO_INCREMENT,
     `key` VARCHAR(255),
-    value VARCHAR(255),
+    value MEDIUMTEXT,
     pended_id INT,
     PRIMARY KEY (id),
     FOREIGN KEY (pended_id) REFERENCES pended (id)
